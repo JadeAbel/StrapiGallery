@@ -1,0 +1,2 @@
+# StrapiGallery
+ArtCatalog
