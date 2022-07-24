@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "art_projects",
+  "info": {
+    "singularName": "art-project",
+    "pluralName": "art-projects",
+    "displayName": "Art Projects"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "default": "Un-named"
+    },
+    "Medium": {
+      "type": "richtext"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "art_projects"
+    }
+  }
+}
