@@ -15,6 +15,9 @@ Start your app and open your browser at
 http://localhost:1337/graphql
 (opens new window). You should now be able to access the GraphQL Playground that will help you to write your GraphQL queries and mutations.
 
+Helpful guidance on querying API:
+v=https://docs.strapi.io/developer-docs/latest/developer-resources/database-apis-reference/graphql-api.html#filters
+
 API query for all categories:
 query{
 categories{
@@ -55,6 +58,7 @@ data{
 id
 attributes{
 Name
+Medium
 }
 }
 }}
@@ -66,6 +70,7 @@ data{
 id
 attributes{
 Name
+Medium
 }
 }
 }}
@@ -77,6 +82,19 @@ data{
 id
 attributes{
 Name
+Medium
+}
+}
+}}
+
+API query for single art-project, Medium:"Shiba Frog 🐸 " :
+query{
+artProjects(filters: {Medium: {contains:"FH_4_K_6515042512.png"}}){
+data{
+id
+attributes{
+Name
+Medium
 }
 }
 }}
