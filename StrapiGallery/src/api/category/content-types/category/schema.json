@@ -20,7 +20,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::art-project.art-project",
-      "inversedBy": "categories"
+      "mappedBy": "categories"
     }
   }
 }
